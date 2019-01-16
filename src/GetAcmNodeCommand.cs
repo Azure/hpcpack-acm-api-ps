@@ -9,11 +9,24 @@ namespace HPC.ACM.API.PS
     [OutputType(typeof(API.Models.Node))]
     public class GetAcmNodeCommand : AcmCommand
     {
+        [Parameter(
+            Position = 0,
+            ValueFromPipelineByPropertyName = true)]
+        public string Id { get; set; }
+
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
         protected override void ProcessRecord()
         {
-            var nodes = ApiClient.GetNodes();
-            WriteObject(nodes, true);
+            if (Id != null) {
+                ApiClient.Id = Id;
+                var node = ApiClient.GetNode();
+                WriteObject(node);
+            }
+            else {
+              ApiClient.Count = 100000;
+              var nodes = ApiClient.GetNodes();
+              WriteObject(nodes, true);
+            }
         }
     }
 }
