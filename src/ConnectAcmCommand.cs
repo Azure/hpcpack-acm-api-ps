@@ -17,26 +17,22 @@ namespace HPC.ACM.API.PS
     {
         [Parameter(
             Mandatory = true,
-            ValueFromPipelineByPropertyName = true
-        )]
+            ValueFromPipelineByPropertyName = true)]
         public string IssuerUrl { get; set; }
 
         [Parameter(
             Mandatory = true,
-            ValueFromPipelineByPropertyName = true
-        )]
+            ValueFromPipelineByPropertyName = true)]
         public string ClientId { get; set; }
 
         [Parameter(
             Mandatory = true,
-            ValueFromPipelineByPropertyName = true
-        )]
+            ValueFromPipelineByPropertyName = true)]
         public string ClientSecret { get; set; }
 
         [Parameter(
             Mandatory = true,
-            ValueFromPipelineByPropertyName = true
-        )]
+            ValueFromPipelineByPropertyName = true)]
         public string ApiBasePoint { get; set; }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called

@@ -9,8 +9,7 @@ namespace HPC.ACM.API.PS
     {
         [Parameter(
             Mandatory = true,
-            ValueFromPipelineByPropertyName = true
-        )]
+            ValueFromPipelineByPropertyName = true)]
         public Connection Connection { get; set; }
 
         protected HPCWebAPI ApiClient { get; set; }
