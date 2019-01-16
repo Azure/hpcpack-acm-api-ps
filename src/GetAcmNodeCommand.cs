@@ -3,7 +3,7 @@ using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using HPC.ACM.API;
 
-namespace HPC.ACM.PS
+namespace HPC.ACM.API.PS
 {
     [Cmdlet("Get", "AcmNode")]
     [OutputType(typeof(API.Models.Node))]

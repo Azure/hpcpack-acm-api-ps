@@ -3,7 +3,7 @@ using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 
-namespace HPC.ACM.PS
+namespace HPC.ACM.API.PS
 {
     public class Connection
     {

@@ -2,7 +2,7 @@ using System;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 
-namespace HPC.ACM.PS
+namespace HPC.ACM.API.PS
 {
     [Cmdlet(VerbsDiagnostic.Test,"SampleCmdlet")]
     [OutputType(typeof(FavoriteStuff))]

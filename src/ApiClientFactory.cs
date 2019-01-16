@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using HPC.ACM.API;
 
-namespace HPC.ACM.PS
+namespace HPC.ACM.API.PS
 {
     class ApiClientFactory
     {
