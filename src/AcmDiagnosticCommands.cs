@@ -51,6 +51,23 @@ namespace HPC.ACM.API.PS
         }
     }
 
+    [Cmdlet("Get", "AcmDiagnosticJobAggregationResult")]
+    [OutputType(typeof(object))]
+    public class GetAcmDiagnosticJobAggregationResultCommand : AcmCommand
+    {
+        [Parameter(
+            Position = 0,
+            Mandatory = true,
+            ValueFromPipelineByPropertyName = true)]
+        public int Id { get; set; }
+
+        protected override void ProcessRecord()
+        {
+            var result = ApiClient.GetDiagnosticJobAggregationResult(Id);
+            WriteObject(result);
+        }
+    }
+
     [Cmdlet("Start", "AcmDiagnosticJob", DefaultParameterSetName = "simple")]
     [OutputType(typeof(Models.Job))]
     public class StartAcmDiagnosticJobCommand : AcmCommand
