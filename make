@@ -1,10 +1,11 @@
 #!/bin/bash
 
 name='HPC.ACM.API.PS'
+config=${Config:-Release}
 
 function make
 {
-  dotnet publish -c Release
+  dotnet publish -c "$config"
   if [ "$?" != "0" ]; then
     exit "$?"
   fi
@@ -13,7 +14,7 @@ function make
     rm -rf "$name"
   fi
 
-  cp -r bin/Release/netstandard2.0/publish "$name"
+  cp -r "bin/$config/netstandard2.0/publish" "$name"
 
   cp "${name}.psd1" "${name}/"
 }
